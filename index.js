@@ -5,10 +5,6 @@ var menuLinks = [
     { text: 'orders', href: '/orders' },
     { text: 'account', href: '/account' },
 ];
-menuLinks.forEach(link => {
-    const a = document.createElement('a');
-  })
-
 
 //creating the main**
 const mainE1 = document.querySelector('main');
@@ -28,4 +24,12 @@ topMenuE1.style.height = '100%';
 topMenuE1.style.backgroundColor = 'var(--top-menu-bg)';
 
 topMenuE1.classList.add('flex-around');
+
+//Adding Menu Buttons**
+
+menuLinks.forEach(link => {
+    const a = document.createElement('a');
+    a.setAttribute('href', link.href);
+    a.textContent = link.text; topMenuE1.appendChild(a);
+});
 
